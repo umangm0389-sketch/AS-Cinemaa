@@ -18,8 +18,8 @@ def is_enabled(value, default):
 # Bot Information Configuration
 # ============================
 SESSION = environ.get('SESSION', 'dreamxbotz_search')   # Session name for the bot
-API_ID = int(environ.get('API_ID', '21140176')) # API ID from my.telegram.org
-API_HASH = environ.get('API_HASH', 'b081ec8da8cf5263a6593041c1ae2a3b')  # API Hash from my.telegram.org
+API_ID = int(environ.get('API_ID', '')) # API ID from my.telegram.org
+API_HASH = environ.get('API_HASH', '')  # API Hash from my.telegram.org
 BOT_TOKEN = environ.get('BOT_TOKEN', "8052735237:AAHj_GfTQ9MhA7q-j1aXlQw-04Av6OAaPnA")    # Bot token from @BotFather
 
 # ============================
@@ -41,26 +41,26 @@ FSUB_PICS = (environ.get('FSUB_PICS', 'https://graph.org/file/7478ff3eac37f4329c
 # ============================
 # Admin, Channels & Users Configuration
 # ============================
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6222491731').split()] # Replace with the actual admin ID(s) to add
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6780681900').split()] # Replace with the actual admin ID(s) to add
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002796911670  -1002748966922').split()]  # Channel id for auto indexing (make sure bot is admin)
 
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003281818923'))  # Log channel id (make sure bot is admin)
-BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1003224139958'))  # Bin channel id (make sure bot is admin)
-PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1003291926267'))  # Premium logs channel id
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1003263536963').split()] #(make sure bot is admin)
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002727865001'))  # Log channel id (make sure bot is admin)
+BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1003381967451'))  # Bin channel id (make sure bot is admin)
+PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1003104435471'))  # Premium logs channel id
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '').split()] #(make sure bot is admin)
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002669266714')  # Support group id (make sure bot is admin)
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-1003141475275')  # Request channel id (make sure bot is admin)
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/Movieroll_Chat')  # Support group link (make sure bot is admin)
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/UMoriginal')  # Support group link (make sure bot is admin)
 
 # FORCE_SUB 
 auth_req_channels = environ.get("AUTH_REQ_CHANNELS", "-100")# requst to join Channel for force sub (make sure bot is admin) only for bot ADMINS  
-auth_channels     = environ.get("AUTH_CHANNELS", "-1002630290227 -100309672279 -1003141475275 -1002504916497")# Channels for force sub (make sure bot is admin)
+auth_channels     = environ.get("AUTH_CHANNELS", "-1002630290227")# Channels for force sub (make sure bot is admin)
 
 # ============================
 # Payment Configuration
 # ============================
 QR_CODE = environ.get('QR_CODE', '')    # QR code image for payments
-OWNER_UPI_ID = environ.get('OWNER_UPI_ID', 'saurav.bo@ptyes')    # Owner UPI ID for payments
+OWNER_UPI_ID = environ.get('OWNER_UPI_ID', '')    # Owner UPI ID for payments
 
 STAR_PREMIUM_PLANS = {
     10: "7day",
@@ -73,7 +73,7 @@ STAR_PREMIUM_PLANS = {
 # ============================
 # MongoDB Configuration
 # ============================
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://sbmod88_db_user:XCLxrjdGlaHTG6mz@cluster0.qndjonz.mongodb.net/?autobot=Cluster0")  # MongoDB URI for the database
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://umangm0389_db_user:hSeGcZOm4Wn4KZKe@cluster0.z8vxadj.mongodb.net/?appName=Cluster0")  # MongoDB URI for the database
 DATABASE_NAME = environ.get('DATABASE_NAME', "autobot") # Database name (default: cluster)
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'dreamcinezone_files') # Collection name (default: dreamcinezone_files)
 
@@ -84,7 +84,7 @@ DATABASE_URI2 = environ.get('DATABASE_URI2', "")  # MongoDB URI for the second d
 # Movie Notification & Update Settings
 # ============================
 MOVIE_UPDATE_NOTIFICATION = bool(environ.get('MOVIE_UPDATE_NOTIFICATION', True))  # Notification On (True) / Off (False)
-MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1002518211319'))  # Notification of sent to your channel
+MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1002630290227'))  # Notification of sent to your channel
 DREAMXBOTZ_IMAGE_FETCH = bool(environ.get('DREAMXBOTZ_IMAGE_FETCH', True))  # On (True) / Off (False)
 LINK_PREVIEW = bool(environ.get('LINK_PREVIEW', False)) # Shows link preview in notification msg instead of image
 ABOVE_PREVIEW = bool(environ.get('ABOVE_PREVIEW', True)) # Shows link preview above the text in notification msg if True else below the msg
@@ -105,8 +105,8 @@ TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/How_to_get_AS_Links/6")   #
 TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/How_to_get_AS_Links/6")   # Third tutorial link for verification
 
 # Verification (Must Fill All Veriables. Else You Got Error
-SHORTENER_API = environ.get("SHORTENER_API", "c7d26524bec5a47ef34454ed1348511f4124bda6") # Shortener API key
-SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "http://shortxlinks.com") # Shortener website
+SHORTENER_API = environ.get("SHORTENER_API", "8376114393:AAGIv4T-4jHruoESyOj6ZopRHw_l6xYQbIw") # Shortener API key
+SHORTENER_WEBSITE = environ.get("SHORTENER_WEBSITE", "https://linkpays.in/") # Shortener website
 
 SHORTENER_API2 = environ.get("SHORTENER_API2", "")  # Shortener API key for second website
 SHORTENER_WEBSITE2 = environ.get("SHORTENER_WEBSITE2", "") # Shortener website for second website
@@ -120,9 +120,9 @@ THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "54000"))
 # ============================
 # Channel & Group Links Configuration
 # ============================
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/Movie_Provider_group') # Group link for the bot
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Movieroll_Owner') # Owner link for the bot
-UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/+-dkKSAGoUf4wZGFl') # Update channel link for the bot
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/cinemahub_request') # Group link for the bot
+OWNER_LNK = environ.get('OWNER_LNK', 't.me/Cinema_Hub_owner') # Owner link for the bot
+UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/+-y5H21xa2cg0Mzc1') # Update channel link for the bot
 
 # ============================
 # User Configuration
