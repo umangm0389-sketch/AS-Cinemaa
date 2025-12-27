@@ -18,8 +18,8 @@ def is_enabled(value, default):
 # Bot Information Configuration
 # ============================
 SESSION = environ.get('SESSION', 'dreamxbotz_search')   # Session name for the bot
-API_ID = int(environ.get('API_ID', '')) # API ID from my.telegram.org
-API_HASH = environ.get('API_HASH', '')  # API Hash from my.telegram.org
+API_ID = int(environ.get('API_ID', '26261661')) # API ID from my.telegram.org
+API_HASH = environ.get('API_HASH', '8832bbf1b5fe0894027e5284c904f96b')  # API Hash from my.telegram.org
 BOT_TOKEN = environ.get('BOT_TOKEN', "8052735237:AAHj_GfTQ9MhA7q-j1aXlQw-04Av6OAaPnA")    # Bot token from @BotFather
 
 # ============================
@@ -47,9 +47,9 @@ CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHAN
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002727865001'))  # Log channel id (make sure bot is admin)
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1003381967451'))  # Bin channel id (make sure bot is admin)
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1003104435471'))  # Premium logs channel id
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '').split()] #(make sure bot is admin)
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002669266714')  # Support group id (make sure bot is admin)
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-1003141475275')  # Request channel id (make sure bot is admin)
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1003381967451').split()] #(make sure bot is admin)
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002262236579')  # Support group id (make sure bot is admin)
+reqst_channel = environ.get('REQST_CHANNEL_ID', '-1003164519417')  # Request channel id (make sure bot is admin)
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/UMoriginal')  # Support group link (make sure bot is admin)
 
 # FORCE_SUB 
