@@ -73,8 +73,8 @@ STAR_PREMIUM_PLANS = {
 # ============================
 # MongoDB Configuration
 # ============================
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://umangm0389_db_user:hSeGcZOm4Wn4KZKe@cluster0.z8vxadj.mongodb.net/?appName=Cluster0")  # MongoDB URI for the database
-DATABASE_NAME = environ.get('DATABASE_NAME', "umangm0389_db_user") # Database name (default: cluster)
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://umangm0389_db_user:umang7880@cluster0.z8vxadj.mongodb.net/autofilter?retryWrites=true&w=majority")  # MongoDB URI for the database
+DATABASE_NAME = environ.get('DATABASE_NAME', "autofilter") # Database name (default: cluster)
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'dreamcinezone_files') # Collection name (default: dreamcinezone_files)
 
 # If MULTIPLE_DB Is True Then Fill DATABASE_URI2 Value Else You Will Get Error.
