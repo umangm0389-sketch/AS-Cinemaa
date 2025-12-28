@@ -20,14 +20,14 @@ def is_enabled(value, default):
 SESSION = environ.get('SESSION', 'dreamxbotz_search')   # Session name for the bot
 API_ID = int(environ.get('API_ID', '26261661')) # API ID from my.telegram.org
 API_HASH = environ.get('API_HASH', '8832bbf1b5fe0894027e5284c904f96b')  # API Hash from my.telegram.org
-BOT_TOKEN = environ.get('BOT_TOKEN', "8052735237:AAHj_GfTQ9MhA7q-j1aXlQw-04Av6OAaPnA")    # Bot token from @BotFather
+BOT_TOKEN = environ.get('BOT_TOKEN', "8288544619:AAEtMvXtYhtBrFsiiDmisRPp7ZNWpniK8HU")    # Bot token from @BotFather
 
 # ============================
 # Bot Settings Configuration
 # ============================
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))    # Cache time in seconds (default: 5 minutes)
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))  # Use caption filter for search results (default: True)
-INDEX_CAPTION = bool(environ.get('SAVE_CAPTION', True)) # Save caption db when idexing make it False if you dont use USE_CAPTION_FILTER for search results (default: True)
+INDEX_CAPTION = bool(environ.get('SAVE_CAPTION', false)) # Save caption db when idexing make it False if you dont use USE_CAPTION_FILTER for search results (default: True)
 #Making it false will not save caption in db SO you can save some storage space
 
 
@@ -97,12 +97,12 @@ LANDSCAPE_POSTER = bool(environ.get('LANDSCAPE_POSTER', True)) # Shows landscape
 # ============================
 IS_VERIFY = is_enabled('IS_VERIFY', True)  # Verification On (True) / Off (False)
 LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1002727865001')) #Verification Channel Id 
-LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002727865001')) #If Anyone Set Your Bot In Any Group And Set Shortner In That Group Then In This Channel The All Details Come
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1002976350365')) #If Anyone Set Your Bot In Any Group And Set Shortner In That Group Then In This Channel The All Details Come
 VERIFY_IMG = environ.get("VERIFY_IMG", "https://telegra.ph/file/9ecc5d6e4df5b83424896.jpg")
 
-TUTORIAL = environ.get("TUTORIAL", "https://t.me/How_to_get_AS_Links/6")   # Tutorial link for verification
-TUTORIAL_2 = environ.get("TUTORIAL_2", "https://t.me/How_to_get_AS_Links/6")   # Second tutorial link for verification
-TUTORIAL_3 = environ.get("TUTORIAL_3", "https://t.me/How_to_get_AS_Links/6")   # Third tutorial link for verification
+TUTORIAL = environ.get("TUTORIAL", "")   # Tutorial link for verification
+TUTORIAL_2 = environ.get("TUTORIAL_2", "")   # Second tutorial link for verification
+TUTORIAL_3 = environ.get("TUTORIAL_3", "")   # Third tutorial link for verification
 
 # Verification (Must Fill All Veriables. Else You Got Error
 SHORTENER_API = environ.get("SHORTENER_API", "8376114393:AAGIv4T-4jHruoESyOj6ZopRHw_l6xYQbIw") # Shortener API key
@@ -127,9 +127,9 @@ UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/+-y5H21xa2cg0Mzc1
 # ============================
 # User Configuration
 # ============================
-auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '2021145517').split()]
+auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '6780681900').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '2021145517').split()]
+PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '6780681900').split()]
 
 # ============================
 # Miscellaneous Configuration
